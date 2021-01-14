@@ -69,6 +69,7 @@ public class Stack_generics <T >
         it returns negative number and if first string is lexicographically equal to second string, it returns 0.
     		 **/
     		//This sorting is not based on comaring based on NUmber 
+    		//sorting is done on based on ascii and string length
     		
     		ArrayList  <block<T>>temp=new ArrayList<block<T>>();
     		block<T> dis=top;
