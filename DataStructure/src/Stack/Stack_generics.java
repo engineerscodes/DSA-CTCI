@@ -28,6 +28,7 @@ public class Stack_generics <T >
     	public block(T data)
     	{
     	    this.data=data;	
+    	    next= null;
     	}
     }
     
@@ -38,18 +39,18 @@ public class Stack_generics <T >
     	temp.next=top;
     	top=temp;
     }
-    public void pop() throws full
+    public void pop() throws empty 
     {
-    	if(top==null) {throw new full();}
+    	if(top==null) {throw new empty ();}
     	else {
     		System.out.println(" DATA POPED IS :"+top.data);
     	    top=top.next;
     	}    	
     }
     
-    public void sort() throws full
+    public void sort() throws empty 
     {   System.out.println("----------------------------Sorting------------------------------------------");
-    	if(top==null) {System.out.println("Stack is empty ");}
+    	if(top==null) {throw new empty ();}
     	else
     	{
     		/* ArrayList  temp=new ArrayList();
@@ -108,12 +109,13 @@ public class Stack_generics <T >
     	   return "";
     }
     
-    public static void main(String ...strings) throws full
+    public static void main(String ...strings) throws empty 
     {
     	
     	Stack_generics<Integer> sk=new Stack_generics();
     	sk.push(10);
     	sk.push(25);
+    	sk.push(199);
     	sk.push(5);
     	System.out.println(sk);
     	sk.sort();
@@ -140,9 +142,9 @@ public class Stack_generics <T >
     
 }
 
-class full extends Exception{
+class empty extends Exception{
 	
-	full(){System.out.println("STACK IS FULL");
+	empty (){System.out.println("STACK IS empty");
 	}
 	
 	public String toString() {return "STACK IS FULL insert values to Stack Not Possible!!";}
