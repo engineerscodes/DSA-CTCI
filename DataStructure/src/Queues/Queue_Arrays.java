@@ -32,7 +32,7 @@ public class Queue_Arrays
 	     queues[++rear]=data;
 	     System.out.println("The value is Inserted :"+queues[rear]+" :at -"+rear); 	 
 	}
-	  public void pop() throws emptyQueueException
+	  public void dequeue() throws emptyQueueException
 	    {
 	    	if(rear==-1 && front ==-1) {
 	    		throw new emptyQueueException();
@@ -78,11 +78,11 @@ public class Queue_Arrays
     	System.out.println("After sorting !!!!!");
     	System.out.println(qa);
     	
-    	qa.pop();
-    	qa.pop();
-    	qa.pop();
-    	qa.pop();
-    	qa.pop();
+    	qa.dequeue();
+    	qa.dequeue();
+    	qa.dequeue();
+    	qa.dequeue();
+    	qa.dequeue();
     	System.out.println(qa);
     }
   
