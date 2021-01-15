@@ -21,7 +21,7 @@ public class Queue_Arrays
 	
 	public void Inqueue(int data) throws queueFullException
 	{
-	     if(rear==size-1) {new queueFullException();return ;}
+	     if(rear==size-1) {throw new queueFullException();}
 	     if(front==-1 && rear==-1) 
 	     {
 	    	  rear=front=0;
@@ -32,7 +32,7 @@ public class Queue_Arrays
 	     queues[++rear]=data;
 	     System.out.println("The value is Inserted :"+queues[rear]+" :at -"+rear); 	 
 	}
-    public static void main(String ...strings) throws queueFullException
+    public static void main(String ...strings) throws queueFullException,emptyQueueException
     {
     	Queue_Arrays qa=new Queue_Arrays(5);
     	qa.Inqueue(1);
@@ -41,18 +41,45 @@ public class Queue_Arrays
     	qa.Inqueue(5);
     	qa.Inqueue(8);
     	System.out.println(qa);
+    	qa.pop();
+    	qa.pop();
+    	qa.pop();
+    	qa.pop();
+    	qa.pop();
+    	System.out.println(qa);
     }
     
     public String toString()
     {   System.out.println("!!!!!!!!!!!!!!!!!!!!! Element's in Queue !!!!!!!!!!!!!!!!!!!");
+       if(front ==-1&& rear==-1) {System.out.println("Empty Queue"); return"";}
+        
     	for(int i=front ;i<=rear;i++)
     	{
     		System.out.println(queues[i ]);
     	}
     	return "!!!!!!!!!!!!!!!!!!!!!!!End of the Queue!!!!!!!!!!!!!!!!!!!!!";
     }
+    
+    public void pop() throws emptyQueueException
+    {
+    	if(rear==-1 && front ==-1) {
+    		throw new emptyQueueException();
+    	}
+    	if(rear==front) {System.out.println("the element is dequeued :"+queues[front]);
+    	   rear=front=-1;
+    	return;}
+    	System.out.println("the element is dequeued :"+queues[front]);
+    	front++;
+    }
 }
-
+class emptyQueueException extends Exception
+{
+	public emptyQueueException() {System.out.println("Queue is Empty!!!!");return ;}
+	public String  toString()
+	{
+		return "QUEUE IS EMPTY INSERT VALUES!!!";
+	}
+}
 class queueFullException extends Exception
 {
 	  public queueFullException()
