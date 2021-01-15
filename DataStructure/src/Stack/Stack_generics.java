@@ -98,6 +98,8 @@ public class Stack_generics <T >
     	}
     	
     }
+    
+    
     public String toString()
     {    System.out.println("------------------------------Display--------------------------------------- ");
     	block <T> dis=top;
