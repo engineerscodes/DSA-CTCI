@@ -8,7 +8,7 @@ import java.util.*;
  *  RANDOM CODER'S
  *  Tech/Project Lead Android Club
  */
-public class LinkedLists 
+public class LinkedLists  
 {
     node head;
 	static class node
@@ -22,6 +22,7 @@ public class LinkedLists
 			 this.data=data;
 			 next=null;
 		 }
+         
 	}
 	public LinkedLists() 
 	{
@@ -74,8 +75,54 @@ public class LinkedLists
     	catch(LinkedListEmpty e) {e.printStackTrace(); System.exit(0);}
     	
     	node dis=head;
-    	while(dis!=null) {System.out.println(dis.data); dis=dis.next;}
+    	while(dis!=null) {System.out.println(dis.data) ; dis=dis.next;}
     	return "";
+    }
+    
+    
+    
+    public void sort()  {   //use merge sort
+    	System.out.println("-------------sorting-----------");
+    	
+    	ArrayList<node> temp=new ArrayList<node>();
+    	  node dis=head;
+    	  
+    	  while(dis!=null) {
+			temp.add( dis);
+		 dis=dis.next;}
+    	  //temp.sort(null); This will throw error ...........we need a comparator
+    	  
+    	  temp.sort(new Comparator<node>() {
+
+			@Override
+			public int compare(node e1, node e2) {
+				    if(e1.data.toString().compareTo(e2.data.toString())<0)
+				    	return -1;
+				    else if(e1.data.toString().compareTo(e2.data.toString())>0)
+				    	return 1;
+				    else 
+				    	return 0;
+			}
+    		  
+    	  });
+    	 // dis=null;
+    	  node del=head;
+    	  StringBuilder st=new StringBuilder();
+    	  for(int i=0;i<temp.size();i++)
+    	  {
+    		  System.out.println(temp.get(i).data);
+    		  st.append(temp.get(i).data+",");
+    	  }
+    	   //One issue Because of References  del=temp.get(index).data result in error
+    	  //System.out.print(st.toString()); 
+    	  String array[]=st.toString().split(",");
+    	  int count=0;
+    	  while(del!=null)
+    	  {
+    		  del.data=array[count++];
+    		  del=del.next;
+    	  }
+    	  //U should not use this method must use Merger Sort ......
     }
     
     
@@ -98,11 +145,14 @@ public class LinkedLists
         ls.insertbefore("Virat");
         ls.append("Covid-2021");
     	System.out.println(ls);
+    	
+    	ls.sort();
+    	System.out.println(ls);
+ 
     }
-}
 
 
-
+    }
 
 
 class LinkedListEmpty extends Exception
