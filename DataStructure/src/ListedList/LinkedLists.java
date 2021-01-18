@@ -85,13 +85,28 @@ public class LinkedLists
     	System.out.println("-------------sorting-----------");
     	
     	ArrayList<node> temp=new ArrayList<node>();
+    	ArrayList d=new ArrayList();
     	  node dis=head;
     	  
     	  while(dis!=null) {
 			temp.add(dis);
+			d.add(dis.data);
 		 dis=dis.next;}
     	  //temp.sort(null); This will throw error ...........we need a comparator
-    	  
+    	  System.out.println(d);
+    	  d.sort(new Comparator<Object>() {
+
+			@Override
+			public int compare(Object e1, Object e2) {
+				 if(e1.toString().compareTo(e2.toString())<0)
+				    	return -1;
+				    else if(e1.toString().compareTo(e2.toString())>0)
+				    	return 1;
+				    else 
+				    	return 0;
+			}
+
+		});
     	  temp.sort(new Comparator<node>() {
 
 			@Override
@@ -150,6 +165,12 @@ public class LinkedLists
     		//  System.out.println(Arrays.toString(array));
     		  del=del.next;
     	  }
+    	  /*while(del!=null)  Another Way to
+    	  {
+    		  del.data=d.get(count++);// now no refeernces is create ...........
+    		//  System.out.println(Arrays.toString(array));
+    		  del=del.next;
+    	  } */
     	  //U should not use this method must use Merger Sort ......
     	   
     }
