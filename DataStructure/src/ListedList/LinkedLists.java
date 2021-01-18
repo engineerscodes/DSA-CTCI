@@ -146,7 +146,8 @@ public class LinkedLists
     	  int count=0;
     	  while(del!=null)
     	  {
-    		  del.data=array[count++];
+    		  del.data=array[count++];// now no refeernces is create ...........
+    		//  System.out.println(Arrays.toString(array));
     		  del=del.next;
     	  }
     	  //U should not use this method must use Merger Sort ......
