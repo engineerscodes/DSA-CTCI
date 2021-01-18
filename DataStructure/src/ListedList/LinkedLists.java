@@ -75,20 +75,20 @@ public class LinkedLists
     	catch(LinkedListEmpty e) {e.printStackTrace(); System.exit(0);}
     	
     	node dis=head;
-    	while(dis!=null) {System.out.println(dis.data) ; dis=dis.next;}
+    	while(dis!=null) {System.out.println(dis.data); dis=dis.next;}
     	return "";
     }
     
     
     
-    public void sort()  {   //use merge sort
+    public void sort() {
     	System.out.println("-------------sorting-----------");
     	
     	ArrayList<node> temp=new ArrayList<node>();
     	  node dis=head;
     	  
     	  while(dis!=null) {
-			temp.add( dis);
+			temp.add(dis);
 		 dis=dis.next;}
     	  //temp.sort(null); This will throw error ...........we need a comparator
     	  
@@ -107,6 +107,33 @@ public class LinkedLists
     	  });
     	 // dis=null;
     	  node del=head;
+    	  
+    	/*  for(int i=0;i<temp.size();i++)
+    	  {
+    		 System.out.println(temp.get(i).data);
+    		  
+    	  }
+    	  System.out.println("-------------------");
+    	  for(int i=0;i<temp.size();i++)
+    	  {   String str="[";
+    		 System.out.println(temp.get(i).data);
+    		 System.out.println("NODE VALUE :"+del.data);
+    		  del.data=temp.get(i).data;   //this statement refernces arrayList with linkedlist....
+    		  //so changes are reflected in both
+    		   //and deep clone of node class will not work 
+    		  for(node e:temp) {str+=e.data+",";}
+    		  System.out.println("ArrayList :"+str+"]");
+    		  System.out.println("new Node value :"+del.data);
+    		  del=del.next;
+    	  }
+    	  System.out.println("-------------------");
+    	  for(int i=0;i<temp.size();i++)
+    	  {
+    		 System.out.println(temp.get(i).data);
+    		  
+    	  } */
+    	  
+    	//fix
     	  StringBuilder st=new StringBuilder();
     	  for(int i=0;i<temp.size();i++)
     	  {
@@ -123,6 +150,7 @@ public class LinkedLists
     		  del=del.next;
     	  }
     	  //U should not use this method must use Merger Sort ......
+    	   
     }
     
     
@@ -148,11 +176,14 @@ public class LinkedLists
     	
     	ls.sort();
     	System.out.println(ls);
- 
     }
+    
+    
+    
+}
 
 
-    }
+
 
 
 class LinkedListEmpty extends Exception
