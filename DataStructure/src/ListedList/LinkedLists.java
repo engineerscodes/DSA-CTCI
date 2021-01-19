@@ -176,6 +176,7 @@ public class LinkedLists
     }
     
     
+  
     public static void main(String ...strings) throws LinkedListEmpty
     {
     	LinkedLists ls=new LinkedLists();
