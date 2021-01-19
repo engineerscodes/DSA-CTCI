@@ -37,12 +37,13 @@ public class RemoveDups   {
 	{
 		    LinkedLists.node temp=head;
 		    LinkedLists.node n=null ;
-		    HashSet set=new HashSet();
+		    HashSet <Object>set=new HashSet<Object>();
 		    while(temp!=null)
 		    {
-		    	if(set.contains(temp.data)) {n.next=temp.next;}
+		    	if(set.contains(temp.data)) {n.next=temp.next;System.out.println("set :"+n.next.data);}
 		    	else {
 		    		set.add(temp.data);
+		    		System.out.println(temp.data);
 		    		n=temp;
 		    	}
 		    	temp=temp.next;
@@ -52,20 +53,29 @@ public class RemoveDups   {
 	
 	public static void DupsNobuffer()
 	{
-		//Using to Buffer
+		//Using to Two Pointer 
+		
 	}
 	
     public static void main(String ...strings)
     {
     	LinkedLists l=new LinkedLists();
-    	l.append(10);
+    	/*l.append(10);
     	l.append(1);
+    	l.append("Naveen");
+    	l.append("Naveen");
     	l.append("Naveen");
     	l.append("Naveen");
     	l.append(20);
     	l.append(10);
     	l.append(30);
-    	l.append(30);
+    	l.append(30); */
+    l.append(1);
+    l.append(1);
+    l.append(2);
+    l.append(3);
+    l.append(3);
+    l.append(4);
     	//Remove_Dups(l.head);
     	System.out.println(l);
     	DupsOptimal(l.head);
