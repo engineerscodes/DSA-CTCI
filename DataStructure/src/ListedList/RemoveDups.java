@@ -6,7 +6,8 @@ import java.util.*;
 
 /**
  *  @author M.NAVEEN
- *  RANDOM CODER'S
+ *  RANDOM CODER'
+ *  S
  *  Tech/Project Lead Android Club
  */
 public class RemoveDups   {
@@ -62,9 +63,28 @@ public class RemoveDups   {
 		    
 	}
 	
-	public static void DupsNobuffer()
+	public static void DupsNobuffer(LinkedLists.node head)
 	{
 		//Using to Two Pointer 
+		//same has with array we do
+		LinkedLists.node follwer=head;
+		
+		while(follwer!=null)
+		{    LinkedLists.node upfront=follwer;
+		   while(upfront.next!=null) 
+		   { 
+			if(follwer.data==upfront.next.data)
+			{
+				upfront.next=upfront.next.next;
+			}
+			else {
+				upfront=upfront.next;
+			}
+		    }
+		   System.out.println("path"+follwer.data);
+		   follwer=follwer.next;
+		   
+		}
 		
 	}
 	
@@ -81,15 +101,16 @@ public class RemoveDups   {
     	l.append(10);
     	l.append(30);
     	l.append(30); 
-    l.append(1);
-    l.append(1);
-    l.append(2);
-    l.append(3);
-    l.append(3);
-    l.append(5);
+        l.append(1);
+        l.append(1);
+        l.append(2);
+        l.append(3);
+        l.append(8);
+        l.append(1);
     	//Remove_Dups(l.head);
     	System.out.println(l);
-    	DupsOptimal(l.head);
+    	//DupsOptimal(l.head);
+    	DupsNobuffer(l.head);
     	System.out.println(l);
     }
 }
