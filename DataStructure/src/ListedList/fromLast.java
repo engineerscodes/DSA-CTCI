@@ -69,6 +69,7 @@ public class fromLast
         l.append(8);
         l.append(1);
     	
+        
         KfromLast(l.head,50);
         KfromLast(l.head,11);
         optimalKromLast(l.head,10);
