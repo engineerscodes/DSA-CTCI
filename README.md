@@ -13,6 +13,6 @@
  
 <p align ="center">
 
-<imp src="https://github.com/engineerscodes/DSA-CTCI/blob/master/map.jpg" width="80%" heigth="500px">
+<img src="https://github.com/engineerscodes/DSA-CTCI/blob/master/map.jpg" width="80%" heigth="500px">
   
  </p>
