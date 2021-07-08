@@ -22,6 +22,23 @@ public class Array_basic {
 		
 		out.println("Array Demo !");
 		
+		int arr[]=new int[]{1,2,3,4,5};
+		
+		out.println(arr.length);
+		//out.println(Arrays.toString(arr));
+		StringBuilder strb=new StringBuilder();
+		for(int i=0;i<arr.length;i++) {
+			strb.append(arr[i]+" ");
+		}
+		System.out.println(strb);
+		Arrays.asList(arr);
+		
+		
+				
+		
+		//Collections ar[]=new Collections[3];
+		
+		
 	}
 	
 }
