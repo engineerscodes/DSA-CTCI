@@ -37,7 +37,7 @@ public class fact {
 	
 	public static void main(String ...strings) {
 		
-	 out.print(	new fact().factorial(new BigInteger("0")));;
+	 out.print(	new fact().factorial(new BigInteger("0")));
 		
 	}
 
