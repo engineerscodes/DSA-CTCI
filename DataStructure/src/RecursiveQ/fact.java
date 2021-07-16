@@ -27,9 +27,9 @@ public class fact {
     	if(n.intValue()<=1) {
     		return new BigInteger("1");
     	} 
-    	if(n.equals(b1)){
+    	/*if(n.equals(b1)){
     		return new BigInteger("1");
-    	}
+    	}*/
     	
     	return n.multiply(factorial(n.subtract(b1)));
     	
@@ -37,9 +37,13 @@ public class fact {
 	
 	public static void main(String ...strings) {
 		
-	 out.print(	new fact().factorial(new BigInteger("0")));
+	 out.print(	new fact().factorial(new BigInteger("100")));
 		
 	}
 
 }
-
+//output
+//933262154439441526816992388562667004907159682643
+//816214685929638952175999932299156089414639761565
+//182862536979208272237582511852109168640000000000
+//00000000000000
