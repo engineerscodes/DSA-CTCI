@@ -27,10 +27,18 @@ public class fact {
     	if(n.intValue()<=1) {
     		return new BigInteger("1");
     	} 
-    	/*if(n.equals(b1)){
-    		return new BigInteger("1");
-    	}*/
+			     /*
+			     * if this BigInteger is too big to fit in an
+			     * {@code int}, only the low-order 32 bits are returned.
+			     * Note that this conversion can lose information about the
+			     * overall magnitude of the BigInteger value as well as return a
+			     * result with the opposite sign
+			     */
     	
+	    /*if(n.equals(b1)){
+	    		return new BigInteger("1");
+	    }*/
+	    	
     	return n.multiply(factorial(n.subtract(b1)));
     	
     }
@@ -38,7 +46,6 @@ public class fact {
 	public static void main(String ...strings) {
 		
 	 out.print(	new fact().factorial(new BigInteger("100")));
-		
 	}
 
 }
