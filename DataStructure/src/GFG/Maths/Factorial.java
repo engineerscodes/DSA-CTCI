@@ -17,10 +17,11 @@ public class Factorial {
 		long fact=1;
 		for(int i=1;i<=n;i++) {
 			 fact*=i;
-		}
+		   }
 		
 		System.out.println(fact);
 		System.out.println("fact using rec :"+rec(n));
+		String str[]="".split("");
 	}
 
 	
@@ -29,7 +30,7 @@ public class Factorial {
 			return 1;
 		}
 		else return n*rec(n-1);
-			
-		
+	    //Collections.sort();
+	
 	}
 }
