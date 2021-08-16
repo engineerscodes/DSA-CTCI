@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package Stack;
 
 import java.util.*;
@@ -96,7 +94,9 @@ public class Stacks_Array
 	    st2.push(99);
 	    st2.sort();
 	    System.out.println(st2);
-	    
+	    Scanner n=new Scanner(System.in);
+	    int nav=n.nextInt();
+	    System.out.println(nav);
 	    
 	}
 	
