@@ -48,6 +48,8 @@ public class basic001 {
 	   Math.random();
 	   
 	   out.println((int)'a'-'a');
+	   
+	   
 	
 	}
 	
