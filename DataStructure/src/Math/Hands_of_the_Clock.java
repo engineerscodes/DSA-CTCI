@@ -19,6 +19,7 @@ In the first line, print the position of hour hand – Print On a particular let
 
 In the next line, print the position of minute hand
 */
+package Math;
 import java.util.*;
 public class Hands_of_the_Clock
 {

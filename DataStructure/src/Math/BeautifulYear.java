@@ -1,3 +1,5 @@
+
+package Math;
 // codeforces.com/problemset/problem/271/A
 import java.util.*;
 public class BeautifulYear {

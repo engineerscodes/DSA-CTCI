@@ -3,6 +3,8 @@
 // f(4) =  - 1 + 2 - 3 + 4 = 2
 // f(5) =  - 1 + 2 - 3 + 4 - 5 =  - 3
 // Using Mathmematical Iduction we get = (n / 2) - n
+package Math;
+
 import java.util.*;
 public class Calculating_Function 
 {

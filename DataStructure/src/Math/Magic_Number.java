@@ -15,7 +15,7 @@
 // 441231
 // output:
 // NO
-
+package Math;
 import java.util.*;
 public class Magic_Number
 {

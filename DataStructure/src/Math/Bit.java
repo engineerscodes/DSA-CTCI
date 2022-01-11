@@ -11,7 +11,7 @@
 
 // output:
 // 0
-
+package Math;
 import java.util.*;
 public class Bit 
 {

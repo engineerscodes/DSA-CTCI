@@ -1,3 +1,4 @@
+package Math;
 // codeforces.com/contest/617/problem/A
 // input:
 // 5

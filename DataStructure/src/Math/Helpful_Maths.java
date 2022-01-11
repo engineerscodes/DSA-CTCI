@@ -8,6 +8,7 @@
 // 1+1+3+1+3
 // output:
 // 1+1+1+3+3
+package Math;
 import java.util.*;
 public class Helpful_Maths
 {

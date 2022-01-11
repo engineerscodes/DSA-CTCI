@@ -12,7 +12,7 @@
 //  0 0 0 0 0
 //  0 0 0 0 0
 
-
+package Math;
 import java.util.*;
 public class BeautifulMatrix 
 {

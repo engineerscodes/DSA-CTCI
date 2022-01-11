@@ -6,6 +6,8 @@
 // Limak eats a lot and his weight is tripled after every year, while Bob's weight is doubled after every year.
 
 // After how many full years will Limak become strictly larger (strictly heavier) than Bob?
+
+package Math;
 import java.util.*;
 public class Bear_and_Brother
 {

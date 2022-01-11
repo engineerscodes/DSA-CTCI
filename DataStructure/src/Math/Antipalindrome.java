@@ -15,7 +15,7 @@
 // wobervhvvkihcuyjtmqhaaigvvgiaahqmtjyuchikvvhvrebow           wobervhvvkihcuyjtmqhaaigvvgiaahqmtjyuchikvvhvrebow
 // output:                                                      output:
 // 49                                                           50
-
+package Math;
 import java.util.*;
 public class Antipalindrome 
 {
